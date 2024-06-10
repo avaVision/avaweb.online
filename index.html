@@ -33,19 +33,10 @@
     padding-top: 1%;
     padding-bottom: 5%;
     overflow: hidden;
-    position: relative; /* Add this line */
+    position: relative; 
+    border-bottom: 2px dotted #4d4d4d;
 }
 
-#centered-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% + 20px); /* Adjusted for padding */
-    height: calc(100% + 20px); /* Adjusted for padding */
-    border: 3px dotted rgb(51, 51, 51);
-    pointer-events: none;
-}
 
 
         #image {
@@ -74,8 +65,10 @@
             font-family: monospace;
         }
 
-        a:hover + .tooltip {
+        a:hover {
             display: block;
+            background-color: #3dbdc4;
+            color: white;
         }
 
 
@@ -119,7 +112,7 @@
     height: 40px;
     width: 100%;
     background: #fff;
-    animation: typing 3s steps(9) infinite; /* Removed 'infinite' to play the animation once */
+    animation: typing 5s steps(9) infinite; /* Removed 'infinite' to play the animation once */
 }
 
 
@@ -135,6 +128,8 @@
 
 li {
   color: #333;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 
@@ -146,9 +141,9 @@ li {
         <ul class="animet-text">
           <li><span>avaVision</span></li>
       </ul>
-    <a href="avanipper-resume.net">> Resume</a>
-    <a href="avaweb.online/portfolio">> Portfolio</a>
-    <a href="avaweb.online/about">> About me</a>
+    <a href="https://avanipper-resume.net">> Resume</a>
+    <a href="portfolio">> Portfolio</a>
+    <a href="about">> About me</a>
     </div>
 
 </body>
