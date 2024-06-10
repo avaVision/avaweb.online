@@ -4,8 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>avaweb.online</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        span {
+          font-family: monospace;
+        }
+
+        #centered-card {
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 5%;
+    overflow: hidden;
+    position: relative; /* Add this line */
+}
+
+#centered-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 20px); /* Adjusted for padding */
+    height: calc(100% + 20px); /* Adjusted for padding */
+    border: 3px dotted rgb(51, 51, 51);
+    pointer-events: none;
+}
+
+
+        #image {
+            width: 30vw;
+            height: 30vw;
+            background-image: url('assets/image.png');
+            background-size: cover;
+            margin-top: 30px;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #333;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid transparent;
+            animation: typing 2s steps(20, end), blink-caret 0.5s step-end infinite alternate;
+            font-family: monospace;
+        }
+
+        a:hover + .tooltip {
+            display: block;
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        .main-div .animet-text {
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    padding: 0;
+}
+.animet-text {
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center; /* Added to center the text */
+}
+
+.animet-text li span {
+    position: relative;
+    margin: 5px 0;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.animet-text li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    background: #fff;
+    animation: typing 3s steps(9) infinite; /* Removed 'infinite' to play the animation once */
+}
+
+
+@keyframes typing {
+    40%,
+    60% {
+        left: calc(100% + 0px);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+li {
+  color: #333;
+}
+
+
+    </style>
 </head>
 <body>
-    <p>test</p>
+    <div id="centered-card">
+        <div id="image"></div>
+        <ul class="animet-text">
+          <li><span>avaVision</span></li>
+      </ul>
+    <a href="avanipper-resume.net">> Resume</a>
+    <a href="avaweb.online/portfolio">> Portfolio</a>
+    <a href="avaweb.online/about">> About me</a>
+    </div>
+
 </body>
 </html>
