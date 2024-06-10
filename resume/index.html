@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+        </style>
+    <title>Ava Nipper</title>
+    <style>
+
+
+::selection {
+    background-color: #008299; 
+    color: #ffffff; 
+}
+
+
+::-moz-selection {
+    background-color: #008299;
+    color: #ffffff;
+}
+
+        
+        @keyframes fadeIn {
+    from {
+        opacity: 0; /* Start from opacity 0 */
+    }
+    to {
+        opacity: 1; /* End at opacity 1 */
+    }
+}
+
+
+        h1 {
+            font-size: 2em;
+            font-family: "DM Mono", monospace;
+            font-weight: 300;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-family: "DM Mono", monospace;
+            font-size: 1.2em;
+            margin: 2px;
+            font-weight: normal;
+        }
+
+        h3 {
+            font-family: "DM Mono", monospace;
+        }
+
+        h4 {
+            font-family: "DM Mono", monospace;
+            font-size: 1em;
+        }
+
+        h5 {
+            font-family: "DM Mono", monospace;
+            font-size: 1em;
+        }
+
+        p {
+            font-family: "DM Mono", monospace;
+            font-size:1em;
+        }
+
+        a {
+    border: none;
+    outline: none;
+    font-size: 1em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: "DM Mono", monospace;
+    color: #008299; /* Corrected color code */
+    text-decoration: none;  /* Add this line to remove underline */
+}
+
+
+
+        li {
+            font-family: "DM Mono", monospace;
+            font-size: 1em;
+            margin-bottom: 10px;
+            list-style-type: square;
+        }
+
+        .border-bottom {
+            width: 100%;
+            height: 5px;
+            position: relative;
+            border-bottom: 1px solid black;
+            margin-bottom: 30px;
+        }
+
+        .blue-text {
+            color: #00829f;
+            margin: 1px;
+            margin-top: 28px;
+        }
+
+
+
+
+        #container {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            animation: fadeIn 0.4s ease-in forwards;
+        }
+
+        #container-l {
+            background-color: rgb(255, 255, 255);
+            height: 100vh;
+            width: 45vw;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding-left: 5vw;
+        }
+
+        #container-l h1 {
+            color: rgb(0, 0, 0);
+            text-align:left;
+            font-family: "DM Mono", monospace;
+        }
+
+        #container-l h2 {
+            color: rgb(0, 0, 0);
+            text-align: left;
+            font-family: "DM Mono", monospace;
+        }
+
+        #container-l p {
+            color: rgb(0, 0, 0);
+            text-align: left;
+            font-family: "DM Mono", monospace;
+        }
+
+        #container-r {
+            background-color: rgb(255, 255, 255);
+            height: 100vh;
+            width: 45vw;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-right: 5vw;
+        }
+
+        #container-r h1 {
+            color: rgb(0, 0, 0);
+            text-align: right;
+            font-family: "DM Mono", monospace;
+            width: 100%;
+        }
+
+        #container-r h2 {
+            color: black;
+            text-align: right;
+            font-family: "DM Mono", monospace;
+        }
+
+        #container-r h3 {
+            color: black;
+            text-align: right;
+            font-family: "DM Mono", monospace;
+        }
+
+        #container-r p {
+            color: rgb(0, 0, 0);
+            text-align: left;
+            font-family: "DM Mono", monospace;
+        }
+
+        #social-container {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+}
+
+.social-icons {
+    display: flex;
+    gap: 5px;
+    padding: 1px;
+    margin-top: -15px;
+    margin-bottom: 2px;
+}
+
+.icon-container {
+    margin-top: 20px;
+    background-color: #00829f;
+    width: 35px;  /* Adjust the size as needed */
+    height: 35px; /* Adjust the size as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    transform: rotate(45deg); /* Rotate the container */
+}
+
+/* Adjust the hover effect */
+.icon-container:hover {
+    background-color: white;
+    color: #00829f;
+    transform: rotate(45deg) scale(1.1); /* Scale up on hover */
+}
+
+
+.icon-container:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.icon-container:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.icon-container:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.icon-container .fab {
+    color: white; 
+}
+
+.icon-container .fab:hover {
+    color: #00829f;
+}
+
+
+.social-icons a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+}
+
+.fab:hover {
+    color: #ffffff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+  to {
+    width: 100%
+  }
+}
+
+/* The blinking cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: orange; /* Change color as per your choice */
+  }
+}
+
+
+
+
+/* CSS for devices with a maximum width of 768 pixels (e.g., tablets and mobile phones) */
+@media only screen and (max-width: 768px) {
+    h1 {
+            font-size: 1.5em;
+            font-family: "DM Mono", monospace;
+            font-weight: 300;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-family: "DM Mono", monospace;
+            font-size: 1.5em;
+            margin: 2px;
+            font-weight: normal;
+        }
+
+        h3 {
+            font-family: "DM Mono", monospace;
+            font-size: 0.8em;
+        }
+
+        h4 {
+            font-family: "DM Mono", monospace;
+            font-size: 0.7em;
+        }
+
+        h5 {
+            font-family: "DM Mono", monospace;
+            font-size: 0.8em;
+        }
+
+        p {
+            font-family: "DM Mono", monospace;
+            font-size: 0.7em;
+        }
+
+        a {
+    border: none;
+    outline: none;
+    font-size: 0.8em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: "DM Mono", monospace;
+    color: #008299; /* Corrected color code */
+    text-decoration: none;  /* Add this line to remove underline */
+}
+
+
+
+        li {
+            font-family: "DM Mono", monospace;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+            list-style-type: square;
+        }
+
+        .social-icons {
+    display: flex;
+    gap: 5px;
+    padding: 1px;
+    margin-top: -15px;
+    margin-bottom: 6px;
+}
+
+#container {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #container-l {
+            background-color: rgb(255, 255, 255);
+            height: 100vh;
+            width: 90vw;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding-left: 5vw;
+        }
+
+        #container-r {
+            background-color: rgb(255, 255, 255);
+            height: 100vh;
+            width: 90vw;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding-left: 5vw;
+        }
+        
+}
+
+
+
+
+    </style>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<body>
+    <div id="container">
+        <div id="container-l">
+            <h1 style="color:#008299" >Ava Nipper</h1>
+            <div class="social-icons">
+                <div class="icon-container">
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="icon-container">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="icon-container">
+                    <a href="https://www.github.com" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <h1>Projects</h1>
+            <div class="border-bottom"></div>
+            <br>
+            <a href="https://1maginary.online/radio"><h2 style="color:#008299" >1maginary Digital Radio</h2></a>
+            <h4>> Full-Stack Developer, Producer & System Administrator</h4>
+            <ul>
+                <li>Developed and maintained a comprehensive digital radio platform featuring live streaming, chat functionality, a robust backend server, user authorization, and gamification elements such as experience points (XP) and items. Hosted and managed all components to ensure seamless operation.</li>
+                <li>Developed stylistic interface using HTML, CSS, JavaScript.</li>
+                <li>Built and maintained a scalable backend server using Firebase and Node.js.</li>
+                <li>Integrated live audio streaming capabilities using AWS.</li>
+                <li>Implemented real-time chat features for users to interact during live streams.</li>
+                <li>Created and managed gamification elements like XP and items to enhance user engagement.</li>
+                <li>Deployed and managed the platform on a Linode server.</li>
+            </ul>
+            <div class="border-bottom"></div>
+
+
+
+
+            <br>
+            <a href="https://1maginary.online/wiki"><h2 style="color:#008299" >1maginary Wiki</h2></a>
+            <h4>> Full-Stack Developer & Management</h4>
+            <h4>Key Responsibilities</h4>
+            <ul>
+                <li><strong>User Authentication and Authorization: </strong>Implemented secure user authentication and role-based authorization using Firebase Authentication to manage user access and permissions.</li>
+                <li><strong>Content Management: </strong>Developed functionalities for users to submit new pages and edit existing ones, ensuring smooth content collaboration and version control.</li>
+                <li><strong>Markdown Integration: </strong>Integrated Markdown syntax support for easy and flexible content formatting, enhancing the usability of the platform for users familiar with Markdown.</li>
+                <li><strong>Database Management: </strong>Utilized Firebase Firestore as the backend database to store and retrieve wiki pages, user data, and comments efficiently.</li>
+                <li><strong>Comments and Replies: </strong>Added a comments section with threaded replies to foster community interaction and discussion around wiki pages.</li>
+            </ul>
+            <br>
+            <h4>Technologies Used:</h4>
+            <ul>
+                <li><strong>Frontend: </strong>Bootstrap, HTML, CSS, JavaScript,</li>
+                <li><strong>Backend: </strong>Node.js, Firebase</li>
+                <li><strong>Database: </strong>Firestore</li>
+                <li><strong>Authentication: </strong>Firebase Authentication</li>
+                <li><strong>Version Control: </strong>Git, GitHub</li>
+                <li><strong>Deployment: </strong>Linode</li>
+            </ul>
+            <br>
+            <div class="border-bottom"></div>
+
+
+            <a href="https://1maginary.online/magazine-index"><h2 style="color:#008299;" >1maginary Magazine</h2></a>
+            <h4>Full-Stack Developer & Graphic Designer</h4>
+            <h4>Key Responsibilities</h4>
+            <ul>
+                <li><strong>Graphic Design: </strong>Designed visually compelling layouts, covers, and graphics for each issue using Adobe Creative Suite (Photoshop, Illustrator, InDesign).</li>
+                <li><strong>Content Creation: </strong>Authored and edited articles on cybersecurity and other tech topics.</li>
+                <li><strong>Collaboration: </strong>Worked with other designers for content.</li>
+                <li><strong>Website Management: </strong>Managed and updated the magazine’s website, optimizing it for user experience and SEO.</li>
+            </ul>
+            <br>
+            <h4>Technologies Used:</h4>
+            <ul>
+                <li><strong>Design: </strong>Photoshop, Illustrator</li>
+                <br>
+                <br>
+                <br>
+                <br>
+            </ul>
+            <div class="border-bottom"></div>
+
+        </div>
+
+        <div id="container-r">
+            <a>919-418-8022</a>
+            <br>
+            <a>avanipper85@gmail.com</a>
+            <br>
+            <a>Raleigh, North Carolina</a>
+            <h1>Skills</h1>
+            <div class="border-bottom"></div>
+            <br>
+            <p>HTML / JAVASCRIPT / CSS</p>
+            <br>
+            <p>Bootstrap / React.js</p>
+            <br>
+            <p>MySQL / Firebase / Node.js</p>
+            <br>
+            <p>Web and UX design</p>
+            <p>Video Production / Audio Mixing</p>
+            <br>
+            <p>Adobe Creative Suite</p>
+            <br>
+            <p>Excel VBA</p>
+            <br>
+            <h1>Education</h1>
+            <h2>Liberty University Online Academy</h2>
+            <h2>2019-2024</h2>
+            <br>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+
+
+    
+    </div>
+    <br>
+    <br>
+
+
+    
+    
+    
+</body>
+</html>
+
